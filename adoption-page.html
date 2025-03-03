@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoption - Gau Seva Ashram</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Header styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: white;
+            color: black;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .logo a {
+            color: black;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: black;
+            font-weight: 500;
+        }
+
+        /* Page Content */
+        .page-header {
+            background-color: #000;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .intro-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+
+        .intro-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #444;
+        }
+
+        .intro-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .adoption-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .adoption-image {
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .adoption-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #444;
+        }
+
+        .adoption-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .adoption-benefits {
+            margin: 3rem 0;
+        }
+
+        .benefits-heading {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .benefits-heading h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #444;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            background-color: #f9f9f9;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .benefit-card h3 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .cows-available {
+            margin: 3rem 0;
+        }
+
+        .cows-heading {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .cows-heading h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #444;
+        }
+
+        .cows-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .cow-card {
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .cow-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .cow-info {
+            padding: 1.5rem;
+        }
+
+        .cow-info h3 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .cow-info p {
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #000;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #333;
+        }
+
+        .adoption-form {
+            background-color: #f9f9f9;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            margin-top: 3rem;
+        }
+
+        .adoption-form h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: #444;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .submit-btn {
+            background-color: #000;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #333;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #222;
+            padding: 3rem 2rem;
+            color: white;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid #444;
+        }
+
+        @media (max-width: 768px) {
+            .adoption-info {
+                grid-template-columns: 1fr;
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            .footer-content {
+                flex-direction: column;
+            }
+            .footer-section {
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo"><a href="gau-seva-ashram.html">Gau Seva Ashram</a></div>
+        <nav>
+            <ul>
+                <li><a href="about-us-page.html">About Us</a></li>
+                <li><a href="donation-page.html">Donation</a></li>
+                <li><a href="adoption-page.html">Adoption</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Cow Adoption</h1>
+        <p>Adopt a cow and make a difference in their lives</p>
+    </section>
+
+    <!-- Adoption Content -->
+    <div class="container">
+        <div class="intro-text">
+            <h2>Adopt a Cow, Change a Life</h2>
+            <p>Our cow adoption program allows you to make a meaningful impact in the life of a rescued cow while staying connected with them through regular updates and visits.</p>
+            <p>By adopting a cow, you become their guardian and help provide for their daily needs including food, shelter, and medical care.</p>
+        </div>
+
+        <div class="adoption-benefits">
+            <div class="benefits-heading">
+                <h2>Benefits of Adopting a Cow</h2>
+                <p>Adopting a cow brings numerous benefits both to you and the cow.</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>Spiritual Connection</h3>
+                    <p>Form a spiritual connection with a sacred animal and earn immense punya (spiritual merit) according to Hindu traditions.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Meaningful Gifting</h3>
+                    <p>Give a unique and meaningful gift to your loved ones by adopting a cow in their name for special occasions.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Learning Opportunity</h3>
+                    <p>Provide an educational experience for your children to learn about compassion, responsibility, and animal care.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Making a Difference</h3>
+                    <p>Directly contribute to the welfare and protection of cows while supporting sustainable farming practices.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Preserving Cultural Heritage</h3>
+                    <p>Contribute to the preservation of ancient Hindu traditions and cultural heritage associated with cow veneration.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Supporting Rural Communities</h3>
+                    <p>Help sustain rural livelihoods and support local communities engaged in ethical cow care and agriculture.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cows-available">
+            <div class="cows-heading">
+                <h2>Cows Available for Adoption</h2>
+                <p>Meet some of our lovely cows who are waiting for caring guardians.</p>
+            </div>
+            <div class="cows-grid">
+                <div class="cow-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Lakshmi">
+                    <div class="cow-info">
+                        <h3>Lakshmi</h3>
+                        <p>Age: 7 years</p>
+                        <p>Lakshmi is a gentle cow who loves to be petted. She was rescued after being abandoned due to an injury.</p>
+                        <a href="#adoption-form" class="btn">Adopt Lakshmi</a>
+                    </div>
+                </div>
+                <div class="cow-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Krishna">
+                    <div class="cow-info">
+                        <h3>Krishna</h3>
+                        <p>Age: 5 years</p>
+                        <p>Krishna is a playful cow with a distinctive black coat. He was rescued from a slaughterhouse.</p>
+                        <a href="#adoption-form" class="btn">Adopt Krishna</a>
+                    </div>
+                </div>
+                <div class="cow-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Ganga">
+                    <div class="cow-info">
+                        <h3>Ganga</h3>
+                        <p>Age: 8 years</p>
+                        <p>Ganga is a calm and dignified cow who has been with us for 5 years after being rescued from the streets.</p>
+                        <a href="#adoption-form" class="btn">Adopt Ganga</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Gau Seva Ashram</h3>
+                <p>Providing care and protection for cows in India since 2010.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="about-us-page.html">About Us</a></li>
+                    <li><a href="donation-page.html">Donation</a></li>
+                    <li><a href="adoption-page.html">Adoption</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <p>No.42, 4th Cross E Block, RHCS Layout,<br>
+                    Erranapalya, Bengaluru - 560091<br>
+                Phone: +91 9845977002</p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>© 2025 Gayathri Naati Hassu Goushala Charitable Trust. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Gau Seva Ashram</title>
+    <style>
+      /* Reset and base styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        line-height: 1.6;
+        color: #333;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      /* Header styles */
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: white;
+        color: black;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .logo a {
+        color: black;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+
+      nav ul li {
+        margin-left: 2rem;
+      }
+
+      nav ul li a {
+        color: black;
+        font-weight: 500;
+      }
+
+      /* Page Header */
+      .page-header {
+        background-color: #000;
+        color: white;
+        padding: 3rem 2rem;
+        text-align: center;
+      }
+
+      .page-header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      /* Container */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+      }
+
+      /* About Content */
+      .about-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      .about-text {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .about-text h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: #444;
+      }
+
+      .about-text p {
+        margin-bottom: 1.5rem;
+      }
+
+      /* Mission & Vision */
+      .mission-vision {
+        margin-top: 4rem;
+      }
+
+      .mission-vision h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        color: #444;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+
+      .card {
+        background-color: #f9f9f9;
+        padding: 2rem;
+        border-radius: 5px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .card h3 {
+        margin-bottom: 1rem;
+        color: #333;
+      }
+
+      /* Cow Breeds Section */
+      .cow-breeds {
+        margin-top: 4rem;
+      }
+
+      .cow-breeds h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        color: #444;
+      }
+
+      /* Footer styles */
+      footer {
+        background-color: #222;
+        padding: 3rem 2rem;
+        color: white;
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+      }
+
+      .footer-section {
+        flex: 1;
+        min-width: 250px;
+        margin-bottom: 2rem;
+      }
+
+      .footer-section h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 0.8rem;
+      }
+
+      .copyright {
+        text-align: center;
+        padding-top: 2rem;
+        margin-top: 2rem;
+        border-top: 1px solid #444;
+      }
+      .about-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        }
+
+        .about-text {
+        max-width: 800px;
+        }
+
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+        .about-content {
+          grid-template-columns: 1fr;
+        }
+        .cards {
+          grid-template-columns: 1fr;
+        }
+        .footer-content {
+          flex-direction: column;
+        }
+        .footer-section {
+          margin-bottom: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <a href="gau-seva-ashram.html">Gau Seva Ashram</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="about-us-page.html">About Us</a></li>
+          <li><a href="donation-page.html">Donation</a></li>
+          <li><a href="adoption-page.html">Adoption</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <h1>About Us</h1>
+      <p>Learn about our mission and work in cow protection</p>
+    </section>
+
+    <!-- About Content -->
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>Our Story</h2>
+          <p>
+            Gayathri Natti Hassu Goshala was established in 2010 with a mission to
+            provide care, protection, and shelter for cows in need. Located in
+            Bengaluru, Karnataka, our Goshala has grown from humble beginnings to
+            become a sanctuary for hundreds of cows.
+          </p>
+          <p>
+            The Goshala was founded by a group of dedicated individuals who were
+            concerned about the welfare of abandoned, old, and injured cows. Their
+            vision was to create a safe haven where these sacred animals could live
+            with dignity and receive proper care.
+          </p>
+          <p>
+            Over the years, with the support of generous donors and volunteers, we
+            have expanded our facilities and improved our capabilities to provide
+            better care for our bovine residents.
+          </p>
+        </div>
+      </div>
+
+      <!-- Mission & Vision Section -->
+      <div class="mission-vision">
+        <h2>Our Mission & Vision</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Mission</h3>
+            <p>
+              To rescue, rehabilitate, and provide lifetime care for abandoned,
+              injured, and old cows, while promoting awareness about cow protection
+              and its importance in Indian culture and heritage.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Vision</h3>
+            <p>
+              A world where every cow is treated with respect and compassion, where
+              their contribution to ecology and human welfare is recognized, and
+              where they can live their lives with dignity without fear of neglect
+              or cruelty.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cow Breeds Section -->
+      <div class="cow-breeds">
+        <h2>Cow Breeds</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Sahiwal</h3>
+            <p>
+              Sahiwal cows are known for their high milk production and adaptability
+              to hot climates.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Kankrej</h3>
+            <p>
+              Kankrej cows are famous for their strength and endurance, often used
+              as draft animals.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Red Sindhi</h3>
+            <p>
+              Red Sindhi cows are known for their resilience and good milk yield even
+              in harsh conditions.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Tharparkar</h3>
+            <p>
+              Tharparkar cows are well-adapted to arid regions and are valued for
+              both milk and draft purposes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Gau Seva Ashram</h3>
+          <p>Providing care and protection for cows in India since 2010.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="about-us-page.html">About Us</a></li>
+            <li><a href="donation-page.html">Donation</a></li>
+            <li><a href="adoption-page.html">Adoption</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Information</h3>
+          <p>
+            No.42, 4th Cross E Block, RHCS Layout,<br />
+            Erranapalya, Bengaluru - 560091<br />
+            Phone: +91 9845977002
+          </p>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© 2025 Gayathri Naati Hassu Goushala Charitable Trust. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      // JavaScript for smooth scrolling
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

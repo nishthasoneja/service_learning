@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation - Gau Seva Ashram</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Header styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: white;
+            color: black;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .logo a {
+            color: black;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: black;
+            font-weight: 500;
+        }
+
+        /* Page Content */
+        .page-header {
+            background-color: #000;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .intro-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+
+        .intro-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #444;
+        }
+
+        .intro-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .donation-banner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2rem 0;
+        }
+
+        .donation-banner img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .price {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #444;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #000;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #333;
+        }
+
+        .donation-form {
+            background-color: #f9f9f9;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .donation-form h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: #444;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .submit-btn {
+            background-color: #000;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #333;
+        }
+
+        .bank-details {
+            margin-top: 3rem;
+            background-color: #f9f9f9;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .bank-details h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: #444;
+        }
+
+        .bank-info {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .bank-row {
+            display: flex;
+            margin-bottom: 0.8rem;
+        }
+
+        .bank-row strong {
+            min-width: 150px;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #222;
+            padding: 3rem 2rem;
+            color: white;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid #444;
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            .footer-content {
+                flex-direction: column;
+            }
+            .footer-section {
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo"><a href="gau-seva-ashram.html">Gau Seva Ashram</a></div>
+        <nav>
+            <ul>
+                <li><a href="about-us-page.html">About Us</a></li>
+                <li><a href="donation-page.html">Donation</a></li>
+                <li><a href="adoption-page.html">Adoption</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Make a Donation</h1>
+        <p>Support our work in cow protection and welfare</p>
+    </section>
+
+    <!-- Donation Content -->
+    <div class="container">
+        <div class="intro-text">
+            <h2>Your Support Makes a Difference</h2>
+            <p>Your generous donations help us provide food, shelter, medical care, and love to a lot of cows who have been abandoned, injured, or rescued. Every contribution, regardless of size, helps us continue our mission of cow protection.</p>
+            <p>Donate today and be part of our journey to create a better world for our sacred cows.</p>
+        </div>
+
+        <div class="donation-banner">
+            <img src="Images/QR.jpg" alt="Support Our Goshala">
+        </div>
+        <div class="bank-details">
+            <h2>Bank Transfer Details</h2>
+            <div class="bank-info">
+                <div class="bank-row">
+                    <strong>Account Name:</strong> <span>Gayathri Naati Hassu Goushala Charitable Trust</span>
+                </div>
+                <div class="bank-row">
+                    <strong>Account Number:</strong> <span>add acount number</span>
+                </div>
+                <div class="bank-row">
+                    <strong>Bank Name:</strong> <span>Add details</span>
+                </div>
+                <div class="bank-row">
+                    <strong>Branch:</strong> <span>Naggarabhaavi, Bengaluru</span>
+                </div>
+                <div class="bank-row">
+                    <strong>IFSC Code:</strong> <span>add details</span>
+                </div>
+                <div class="bank-row">
+                    <strong>Account Type:</strong> <span>add details</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Gau Seva Ashram</h3>
+                <p>Providing care and protection for cows in India since 2010.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="about-us-page.html">About Us</a></li>
+                    <li><a href="donation-page.html">Donation</a></li>
+                    <li><a href="adoption-page.html">Adoption</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <p>No.42, 4th Cross E Block, RHCS Layout,<br>
+                    Erranapalya, Bengaluru - 560091<br>
+                Phone: +91 9845977002</p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>© 2025 Gayathri Naati Hassu Goushala Charitable Trust. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // JavaScript for smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
